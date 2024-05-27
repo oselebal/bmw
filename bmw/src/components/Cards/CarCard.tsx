@@ -22,9 +22,9 @@ const CarCard: React.FC<CarCardProps> = ({ model, year, price, image, onDetailCl
       <img src={image} alt={model} className={styles.carImage} />
       <div className={styles.carInfo}>
         <h3>{model}</h3>
-        <p>Year: {year}</p>
-        <p>Price: ${price}</p>
-        <button onClick={onDetailClick}>More Details</button>
+        <p>Год: {year}</p>
+        <p>Цена: ${price}</p>
+        <button onClick={onDetailClick}>Подробнее</button>
       </div>
     </div>
   );

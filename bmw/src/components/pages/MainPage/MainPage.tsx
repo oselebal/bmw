@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Header from '../../Header/Header';
 import CarCard from '../../Cards/CarCard';
 import Footer from '../../Footer/Footer';
-import SpecialOffers from '../../SpecialOffers/SpecialOffers';
 import cars from '../../../data/carsData';
 import styles from './MainPage.module.scss';
 
@@ -29,11 +28,12 @@ const MainPage: React.FC = () => {
             </p>
           </div>
           <div className={styles.filters}>
-            <button onClick={() => handleCategoryChange('All')}>All</button>
-            <button onClick={() => handleCategoryChange('Sedan')}>Sedan</button>
-            <button onClick={() => handleCategoryChange('SUV')}>SUV</button>
-            <button onClick={() => handleCategoryChange('Convertible')}>Convertible</button>
-            <button onClick={() => handleCategoryChange('Hybrid')}>Hybrid</button>
+            <button onClick={() => handleCategoryChange('All')}>Все</button>
+            <button onClick={() => handleCategoryChange('Sedan')}>Седаны</button>
+            <button onClick={() => handleCategoryChange('SUV')}>Внедорожники</button>
+            <button onClick={() => handleCategoryChange('Convertible')}>Кабриолеты</button>
+            <button onClick={() => handleCategoryChange('Hybrid')}>Гибриды</button>
+            <button onClick={() => handleCategoryChange('Coupe')}>Купе</button>
           </div>
           <div className={styles.carGrid}>
             {filteredCars.map((car, index) => (
@@ -47,7 +47,6 @@ const MainPage: React.FC = () => {
               />
             ))}
           </div>
-          {/* <SpecialOffers /> */}
         </main>
       </div>
       <Footer />

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { auth } from '../../../../firebase/firebaseConfig';
+import styles from './Register.module.scss';
 
 const Register: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -19,24 +20,36 @@ const Register: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleRegister}>
-      <h2>Register with Email</h2>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-      <button type="submit">Register</button>
-    </form>
+    <div className={styles.register}>
+      <form onSubmit={handleRegister} className={styles.form}>
+        <h2>Регистрация</h2>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          className={styles.input}
+        />
+        <input
+          type="password"
+          placeholder="Пароль"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+          className={styles.input}
+        />
+        <button type="submit" className={styles.button}>
+          Зарегистрироваться
+        </button>
+      </form>
+      <p>
+        Уже есть аккаунт?{' '}
+        <Link to="/login" className={styles.link}>
+          Войти
+        </Link>
+      </p>
+    </div>
   );
 };
 

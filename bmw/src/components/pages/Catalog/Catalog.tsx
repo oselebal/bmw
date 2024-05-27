@@ -11,7 +11,7 @@ const Catalog: React.FC = () => {
       <Header />
       <div className={styles.catalog}>
         <main className={styles.main}>
-          <h1>Catalog of BMW Cars</h1>
+          <h1>Каталог автомобилей BMW</h1>
           <div className={styles.carGrid}>
             {cars.map((car, index) => (
               <CarCard
@@ -20,7 +20,7 @@ const Catalog: React.FC = () => {
                 year={car.year}
                 price={car.price}
                 image={car.image}
-                onDetailClick={() => alert(`More details about ${car.model}`)}
+                onDetailClick={() => alert(`Подробнее о ${car.model}`)}
               />
             ))}
           </div>

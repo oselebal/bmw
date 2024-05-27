@@ -7,6 +7,9 @@ import x6Image from '../assets/img/x6Image.jpg';
 import z4Image from '../assets/img/z4Image.webp';
 import i8Image from '../assets/img/i8Image.jpg';
 import m3Image from '../assets/img/m3Image.jpeg';
+import x1Image from '../assets/img/x1Image.webp'; // Новые изображения
+import s2Image from '../assets/img/s2Image.jpg';
+import x4Image from '../assets/img/x4Image.jpg';
 
 export interface Car {
   model: string;
@@ -27,7 +30,7 @@ const cars: Car[] = [
     specifications: ['3.0L I6', '8-speed automatic', 'AWD', '335 hp'],
   },
   {
-    model: 'BMW 3 Series',
+    model: 'BMW 3',
     year: 2020,
     price: 45000,
     image: s3Image,
@@ -43,7 +46,7 @@ const cars: Car[] = [
     specifications: ['2.0L I4', '8-speed automatic', 'AWD', '248 hp'],
   },
   {
-    model: 'BMW 5 Series',
+    model: 'BMW 5',
     year: 2018,
     price: 35000,
     image: s5Image,
@@ -51,7 +54,7 @@ const cars: Car[] = [
     specifications: ['2.0L I4', '8-speed automatic', 'RWD', '248 hp'],
   },
   {
-    model: 'BMW 7 Series',
+    model: 'BMW 7',
     year: 2022,
     price: 85000,
     image: s7Image,
@@ -89,6 +92,30 @@ const cars: Car[] = [
     image: m3Image,
     category: 'Sedan',
     specifications: ['3.0L I6', '6-speed manual', 'RWD', '473 hp'],
+  },
+  {
+    model: 'BMW X1',
+    year: 2021,
+    price: 38000,
+    image: x1Image,
+    category: 'SUV',
+    specifications: ['2.0L I4', '8-speed automatic', 'AWD', '228 hp'],
+  },
+  {
+    model: 'BMW 2',
+    year: 2021,
+    price: 42000,
+    image: s2Image,
+    category: 'Coupe',
+    specifications: ['2.0L I4', '8-speed automatic', 'RWD', '248 hp'],
+  },
+  {
+    model: 'BMW X4',
+    year: 2021,
+    price: 53000,
+    image: x4Image,
+    category: 'SUV',
+    specifications: ['2.0L I4', '8-speed automatic', 'AWD', '248 hp'],
   },
 ];
 

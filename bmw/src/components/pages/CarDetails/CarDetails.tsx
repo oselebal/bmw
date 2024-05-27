@@ -10,7 +10,7 @@ const CarDetails: React.FC = () => {
   const car = cars.find((car) => car.model === id);
 
   if (!car) {
-    return <div>Car not found</div>;
+    return <div>Автомобиль не найден</div>;
   }
 
   return (
@@ -20,10 +20,10 @@ const CarDetails: React.FC = () => {
         <main className={styles.main}>
           <h1>{car.model}</h1>
           <img src={car.image} alt={car.model} />
-          <p>Year: {car.year}</p>
-          <p>Price: ${car.price}</p>
-          <p>Category: {car.category}</p>
-          <h2>Specifications</h2>
+          <p>Год: {car.year}</p>
+          <p>Цена: ${car.price}</p>
+          <p>Категория: {car.category}</p>
+          <h2>Спецификации</h2>
           <ul>
             {car.specifications.map((spec, index) => (
               <li key={index}>{spec}</li>
