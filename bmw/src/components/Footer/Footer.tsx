@@ -1,16 +1,17 @@
 import React from 'react';
 import styles from './Footer.module.scss';
+
 const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
-      {/* <div className={styles.company_info}>
-        <div>О нас</div>
-        <div>BMW</div>
-      </div> */}
-      <div className={styles.contact_info}>
+      <div className={styles.contactInfo}>
         <div>Свяжитесь с нами</div>
-        <div>Email: info@bmwsales.com</div>
-        <div>Phone: +1 234 567 890</div>
+        <div>
+          Email: <a href="mailto:info@bmwsales.com">info@bmwsales.com</a>
+        </div>
+        <div>
+          Телефон: <a href="tel:+1234567890">+1 234 567 890</a>
+        </div>
       </div>
       <div className={styles.newsletter}>
         <div>Подписаться на обновления</div>

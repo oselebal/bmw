@@ -15,9 +15,9 @@ const Profile: React.FC = () => {
     if (user && user.email) {
       try {
         await sendPasswordResetEmail(auth, user.email);
-        alert('Password reset email sent!');
+        alert('Письмо для сброса пароля отправлено!');
       } catch (error) {
-        console.error('Error sending password reset email:', error);
+        console.error('Ошибка при отправке письма для сброса пароля:', error);
       }
     }
   };
@@ -33,12 +33,12 @@ const Profile: React.FC = () => {
       <Header />
       <div className={styles.profile}>
         <main className={styles.main}>
-          <h1>Profile</h1>
+          <h1>Профиль</h1>
           {user && (
             <div className={styles.userInfo}>
               <p>Email: {user.email}</p>
-              <button onClick={handlePasswordReset}>Reset Password</button>
-              <button onClick={handleLogout}>Logout</button>
+              <button onClick={handlePasswordReset}>Сбросить пароль</button>
+              <button onClick={handleLogout}>Выйти</button>
             </div>
           )}
         </main>

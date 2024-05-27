@@ -1,0 +1,42 @@
+.carDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+
+  .main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    img {
+      max-width: 800px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 5px;
+        font-size: 1.1em;
+      }
+    }
+  }
+}

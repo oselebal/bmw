@@ -8,13 +8,14 @@ const Header: React.FC = () => {
   const user = auth.currentUser;
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>BMW</div>
+      <Link to="/" className={styles.logo}>
+        BMW
+      </Link>
       <nav className={styles.nav}>
         <Link to="/">Главная</Link>
         <Link to="/catalog">Каталог</Link>
-        <Link to="/special-offers">Специальные предложения</Link>
-        <Link to="/contact">Контакты</Link>
-        {user && <Link to="/profile">Profile</Link>}
+        <Link to="/contacts">Контакты</Link>
+        {user && <Link to="/profile">Профиль</Link>}
       </nav>
     </header>
   );
